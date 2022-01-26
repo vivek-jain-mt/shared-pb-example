@@ -3,7 +3,7 @@ syntax = "proto3";
 package greet;
 option go_package="./greetpb";
 
-// import "google/api/annotations.proto";
+import "google/api/annotations.proto";
 
 
 message Greeting {
@@ -23,8 +23,8 @@ message GreetingResponse {
 
 service GreetingService {
   rpc Greeting (GreetingRequest) returns (GreetingResponse) {
-    // option (google.api.http) = {
-    //   get: "/api/greeting"
-    // };
+     option (google.api.http) = {
+       get: "/api/greeting"
+     };
   }
 }
